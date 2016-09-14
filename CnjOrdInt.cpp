@@ -11,7 +11,19 @@ CnjOrdInt::CnjOrdInt():inicio(0) {
 }
 
 CnjOrdInt::CnjOrdInt(const CnjOrdInt& orig) {
-
+    NdoInt* p = orig.inicio;
+    if (p == 0)
+        inicio = 0;
+    else {
+        inicio = new NdoInt(orig.inicio->dato);
+        p = p->sgt;
+        NdoInt* ultimo = inicio;
+        while(p != 0){ // mientras no se acabe orig.
+            ultimo->sgt = new NdoInt(p->dato);
+            p = p->sgt;
+            ultimo = ultimo->sgt;
+        }
+    }
 }
 
 CnjOrdInt::~CnjOrdInt() {
