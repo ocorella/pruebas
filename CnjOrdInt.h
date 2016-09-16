@@ -48,7 +48,7 @@ public:
     CnjOrdInt& operator-(CnjOrdInt& b);  
     
     // EFE: retorna un nuevo conjunto ordenado que representa la diferencia simétrica de *this con b.
-    CnjOrdInt& operator/(CnjOrdInt& b); 
+    CnjOrdInt& operator/(const CnjOrdInt& b); 
     
     // EFE: retornar una hilera que representa a *this.
     // Por ejemplo: "{}" para el conjunto vacío y "{ 1, 2, 3 }"
