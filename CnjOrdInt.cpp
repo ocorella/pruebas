@@ -144,3 +144,12 @@ string CnjOrdInt::aHil() {
     }
     return fs.str();    
 }
+
+void CnjOrdInt::imprimir () {
+    NodoInt* p = inicio;
+
+    while (p != nullptr){
+        cout << p->dato << ", ";
+        p = p->sgt;
+    }
+}

@@ -53,6 +53,9 @@ public:
     // EFE: retornar una hilera que representa a *this.
     // Por ejemplo: "{}" para el conjunto vacío y "{ 1, 2, 3 }"
     string aHil();
+
+    // EFE: Envía a stdout texto correspondiente a los valores del conjunto.
+    void imprimir();
     
 private:
     struct NdoInt {
